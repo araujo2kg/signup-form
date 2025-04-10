@@ -22,6 +22,7 @@
 }
 
 body {
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.5;
     min-height: 100vh;
 }
@@ -115,15 +116,26 @@ h6 {
 }
 
 .top {
-    height: 35%;
+    height: 34%;
     background: var(--aux-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 60px 40px;
+    gap: 10px;
+}
+
+.top p {
+    max-width: 80ch;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .middle {
-    height: 30%;
+    height: 32%;
 }
 
 .bottom {
-    height: 35%;
+    height: 34%;
     background: var(--aux-bg-color);
 }
