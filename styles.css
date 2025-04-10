@@ -8,7 +8,10 @@
 }
 
 :root {
+    --main-theme-color: rgb(89, 109, 72);
     --aux-bg-color: rgb(240, 240, 240);
+    --input-focus-color: rgb(144, 205, 255);
+    --box-shadow-all: 0 3px 10px rgb(0, 0, 0, 0.3);
 }
 
 *,
@@ -123,6 +126,8 @@ h6 {
     justify-content: flex-end;
     padding: 0 0 60px 40px;
     gap: 10px;
+    position: relative;
+    z-index: 0;
 }
 
 .top p {
@@ -133,9 +138,81 @@ h6 {
 
 .middle {
     height: 32%;
+    padding: 0 0 0 40px;
+    box-shadow: var(--box-shadow-all);
+    position: relative;
+    z-index: 1;
+}
+
+.middle>h1 {
+    font-size: calc(24rem / 16);
+    margin: 10px 0 15px 0;
+}
+
+.row {
+    max-width: 800px;
+    display: flex;
+    gap: 80px;
+    margin: 0 0 20px 0;
+}
+
+.button {
+    position: relative;
+    top: 60px;
+    left: 0px;
+}
+
+.button button {
+    background-color: var(--main-theme-color);
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 40px 5px 40px;
+    box-shadow: var(--box-shadow-all);
+    margin: 0 0 25px 0;
+}
+
+.button button:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.button a {
+    color: var(--main-theme-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input {
+    width: 350px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+}
+
+input:focus {
+    outline: 2px solid var(--input-focus-color);
+    box-shadow: var(--box-shadow-all);
+}
+
+input:user-invalid {
+    outline: 2px solid tomato;
+}
+
+input:user-valid {
+    outline: 2px solid lightgreen;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
 }
 
 .bottom {
     height: 34%;
     background: var(--aux-bg-color);
+    position: relative;
+    z-index: 0;
 }
