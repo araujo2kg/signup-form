@@ -28,31 +28,40 @@
                     <div class="row">
                         <div>
                             <label for="firstName">FIRST NAME</label>
-                            <input type="text" name="firstName" id="firstName" required>
+                            <input type="text" name="firstName" id="firstName" required autocomplete="given-name"
+                                pattern="^[a-zA-Z]{2,20}$" title="Must be 2 to 20 characters" placeholder="John">
                         </div>
                         <div>
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" name="lastName" id="lastName" required>
+                            <input type="text" name="lastName" id="lastName" required autocomplete="family-name"
+                                pattern="^[a-zA-Z]{2,20}$" title="Must be 2 to 20 characters" placeholder="Doe">
                         </div>
                     </div>
                     <div class="row">
                         <div>
                             <label for="email">EMAIL</label>
-                            <input type="email" name="email" id="email" required>
+                            <input type="email" name="email" id="email" required autocomplete="email"
+                                placeholder="john@example.com">
                         </div>
                         <div>
-                            <label for="phoneNumber">PHONE NUMBER</label>
-                            <input type="tel" name="phoneNumber" id="phoneNumber">
+                            <label for="phoneNumber">PHONE NUMBER (optional)</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" autocomplete="tel"
+                                placeholder="(48) 98765-4321" pattern="^(\(?\d{2}\)?\s)\d{5}-?\d{4}$"
+                                title="(48) 98765-4321">
                         </div>
                     </div>
                     <div class="row">
                         <div>
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" required>
+                            <input type="password" name="password" id="password" required
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\S]{8,}$"
+                                title="Minimum 8 characters, 1 Letter, 1 Number, 1 Special Character.">
                         </div>
                         <div>
                             <label for="confirmPassword">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" required>
+                            <input type="password" name="confirmPassword" id="confirmPassword" required
+                                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z\d])[A-Za-z\d\S]{8,}$"
+                                title="Minimum 8 characters, 1 Letter, 1 Number, 1 Special Character.">
                         </div>
                     </div>
                     <div class="button">
